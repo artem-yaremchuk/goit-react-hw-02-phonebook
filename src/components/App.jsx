@@ -46,10 +46,34 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Phonebook</h1>
+        <h1
+          style={{
+            fontWeight: 500,
+            lineHeight: "1.5",
+            textAlign: "center",
+            letterSpacing: "0.02em",
+            color: "#2E2F42",
+            marginBottom: 20,
+            marginTop: 20,
+          }}
+        >
+          Phonebook
+        </h1>
         <ContactForm contacts={contacts} addContact={this.addContact} />
 
-        <h2>Contacts</h2>
+        <h2
+          style={{
+            fontWeight: 500,
+            lineHeight: "1.5",
+            textAlign: "center",
+            letterSpacing: "0.02em",
+            color: "#2E2F42",
+            marginBottom: 20,
+            marginTop: 20,
+          }}
+        >
+          Contacts
+        </h2>
         <Filter filterContact={this.filterContact} />
         <ContactList
           contacts={filteredContacts}
