@@ -2,17 +2,12 @@ import css from "./Filter.module.css";
 import { Component } from "react";
 
 class Filter extends Component {
-  state = {
-    filter: "",
-  };
 
   handleChange = (evt) => {
-    this.setState({ filter: evt.target.value });
-    this.props.filterContact(this.state);
+    this.props.filterContact(evt.target.value);
   };
 
   render() {
-    const { filter } = this.state;
     return (
       <label htmlFor="inputFilter" className={css.filterLabel}>
         Find contacts by name:
@@ -20,7 +15,6 @@ class Filter extends Component {
           type="text"
           className={css.inputFilter}
           id="inputFilter"
-          value={filter}
           onChange={this.handleChange}
           placeholder="Search..."
         />
