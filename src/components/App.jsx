@@ -42,7 +42,8 @@ class App extends Component {
     const { contacts, filter } = this.state;
     const filteredContacts = contacts.filter((contact) =>
       contact.name.toLowerCase().includes(filter.toLowerCase()),
-    );
+    );//як вставити відфільтровані контакти пропсом в контакт
+    //  лист якщо в мене там передаються контакти за замовчуванням і ті що додаються з форми
 
     return (
       <div>
