@@ -16,7 +16,7 @@ class ContactForm extends Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault();
-    if (this.state.name.trim() === "" || this.state.name.trim() === "") {
+    if (this.state.name.trim() === "" || this.state.number.trim() === "") {
       alert("Fill in the fields");
       return;
     }
